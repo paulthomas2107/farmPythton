@@ -4,7 +4,9 @@ import motor.motor_asyncio
 
 # mongodb+srv://rest:Caitlin1966__@cluster0.8crs3.mongodb.net/test?authSource=admin&replicaSet=atlas-x7gn25-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true')
 
-client = motor.motor_asyncio.AsyncIOMotorClient('mongodb+srv://rest:Caitlin1966__@cluster0.8crs3.mongodb.net')
+client = motor.motor_asyncio.AsyncIOMotorClient('mongodb+srv://rest:Caitlin1966__@cluster0.8crs3.mongodb.net/test',
+                                                tls=True,
+                                                tlsAllowInvalidCertificates=True)
 database = client.TodoList
 collection = database.todo
 
